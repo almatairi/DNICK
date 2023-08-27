@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Order a Cake{% endblock title%}
+
+{% block content %}
+    <div class="content-container">
+        <h1 class="cake-name">{{ cake.name }}</h1>
+        <p class="cake-description">{{ cake.description }}</p>
+        <p class="cake-price">{{ cake.price }} Den</p>
+
+        <img class="cake-image" src="{{ cake.image.url }}" alt="">
+
+        <form class="form" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% for field in form %}
+            <div class="form__field">
+                <label for="{{ field.id_for_label }}" class="form__label">{{ field.label }}</label>
+                {{ field }}
+            </div>
+            {% endfor %}
+            <input class="btn btn--sub btn--lg my-md" type="submit" value="Submit">
+        </form>
+        
+    </div>
+{% endblock %}

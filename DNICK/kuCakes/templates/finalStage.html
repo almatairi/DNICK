@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Thank you for ordering{% endblock title %}
+
+{% block content %}
+    <div class="cake-details">
+        <h1 class="cake-name">{{ cake.name }}</h1>
+        <p class="cake-description">{{ cake.description }}</p>
+        <img class="cake-image" src="{{ cake.image.url }}" alt="{{ cake.name }}">
+        <p class="cake-price">{{ cake.price }} Den</p>
+        <p class="cake-occasion">{{ cake.occasion }}</p>
+        <p class="cake-serving-size">{{ cake.servingSize }}</p>
+        <p class="cake-flavor">{{ cake.flavor }}</p>
+        <p class="cake-toppings">{{ cake.toppings }}</p>
+        <p class="cake-card-message">{{ cake.cardMessage }}</p>
+    </div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Kumanov Cakes{% endblock title%}
+
+{% block content %}
+    {% for cake in cakes %}
+        <div class="post-container">
+            <div class="post">
+                <a href="{% url 'order' cake.pk %}">
+                    <img src="{{cake.image.url}}" alt="{{cake.name}}">
+                    <h2>{{cake.name}}</h2>
+                    <p>{{cake.description|truncatechars:30}}</p>
+                    <span class="price">{{cake.price}} Den.</span>
+                    <button class="buy-button">Buy Now</button>
+                    </a>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock%}

@@ -1,0 +1,36 @@
+.cake-details {
+    text-align: center;
+    margin: 20px;
+}
+
+.cake-name {
+    font-size: 24px;
+    color: #333;
+}
+
+.cake-description {
+    font-size: 16px;
+    color: #666;
+}
+
+.cake-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.cake-price {
+    font-size: 18px;
+    color: #f90;
+    margin-top: 10px;
+}
+
+.cake-occasion,
+.cake-serving-size,
+.cake-flavor,
+.cake-toppings,
+.cake-card-message {
+    font-size: 14px;
+    color: #888;
+    margin-top: 5px;
+}
